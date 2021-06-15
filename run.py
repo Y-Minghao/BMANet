@@ -12,7 +12,7 @@ def setup_seed(seed):
     np.random.seed(seed)
     random.seed(seed)
     torch.backends.cudnn.deterministic = True
-setup_seed(2021)
+setup_seed(123)
 warnings.filterwarnings("ignore")
 dataset_name = str(sys.argv[1])
 gpu = int(sys.argv[2])
