@@ -31,7 +31,7 @@ option = {
     'early_stop_patience': -1,  # -1 for no early stop
 }
 print('Load Dataset...')
-data = MoleculeNet(root = r'D:\experiment\molecule_net',name=dataset_name).shuffle()
+data = MoleculeNet(root = '.',name=dataset_name).shuffle()
 data.data.x = data.data.x.float()
 data.data.edge_attr = data.data.edge_attr.float()
 data.data.y = data.data.y.long()
