@@ -1,4 +1,4 @@
-# MPAAN: an efficient and chemically intuitive graph neural network for human oral bioavailability prediction
+# BMANet: an efficient and chemically intuitive graph neural network for human oral bioavailability prediction
 ![消息传递](https://user-images.githubusercontent.com/85927460/122016383-983fd800-cdf3-11eb-959b-f32ed6bbbad6.png)
 
 ## requirements
