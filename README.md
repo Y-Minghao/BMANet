@@ -1,6 +1,6 @@
 # BMANet: an efficient and chemically intuitive graph neural network for human oral bioavailability prediction
 
-![message-passing]
+![message-passing](https://github.com/Y-Minghao/BMANet/blob/main/message-passing.png)
 ## requirements
     torch 1.7.1+cu110
     torch-cluster 1.5.8
