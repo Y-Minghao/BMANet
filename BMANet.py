@@ -11,13 +11,13 @@ from utils import reset, uniform, zeros
 from torch.nn import Sequential, Linear, ReLU
 
 
-class ENConv(MessagePassing):
+class AMPConv(MessagePassing):
     def __init__(self, in_channels: Union[int, Tuple[int, int]],
                  out_channels: int,
                  edge_inchannels: int, hidden_channels: int,
                  aggr: str = 'add',
                  root_weight: bool = True, bias: bool = True, **kwargs):
-        super(ENConv, self).__init__(aggr=aggr, **kwargs)
+        super(AMPConv, self).__init__(aggr=aggr, **kwargs)
 
         self.e_nn = torch.nn.Linear(edge_inchannels,hidden_channels)
         self.n_nn = torch.nn.Linear(in_channels,hidden_channels)
@@ -77,9 +77,9 @@ class ENConv(MessagePassing):
     def __repr__(self):
         return '{}({}, {})'.format(self.__class__.__name__, self.in_channels,
                                    self.out_channels)
-class Edge_update(torch.nn.Module):
+class BMA_update(torch.nn.Module):
     def __init__(self,node_channels,edge_channels,hidden_channels,out_channels):
-        super(Edge_update, self).__init__()
+        super(BMA_update, self).__init__()
         self.n_nn = Linear(node_channels*2,hidden_channels)
         self.root = Linear(edge_channels,hidden_channels)
         self.nn = Linear(hidden_channels,out_channels)
@@ -94,9 +94,9 @@ class Edge_update(torch.nn.Module):
         return F.relu(self.nn(hidden_message))
 
 
-class MPAAN(torch.nn.Module):
+class BMANet(torch.nn.Module):
     def __init__(self):
-        super(MPAAN, self).__init__()
+        super(BMANet, self).__init__()
         self.layer1 = ENConv(in_channels=9,out_channels=64,edge_inchannels=3,hidden_channels=128)
         self.eu1 = Edge_update(node_channels=64,edge_channels=3,hidden_channels=128,out_channels=64)
         self.att_node1 = Sequential(Linear(64,64*4),ReLU(),Linear(64*4,64))
