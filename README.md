@@ -12,6 +12,7 @@
 ## human oral bioavailability dataset
 The human oral bioavailability dataset requires an application to hou et al[1] for authorization to use, and I am not authorized to provide the human oral bioavailability dataset.
 ## BACE and BBBP
+bbbp and BACE are datasets in Molecule net and benchmark commonly used in graph neural networks for molecular property prediction. 
     python run.py dataset_name gpu train_batch train_epoch
 
 
