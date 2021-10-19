@@ -12,8 +12,18 @@
 ## human oral bioavailability dataset
 The human oral bioavailability dataset requires an application to hou et al[1] for authorization to use, and I am not authorized to provide the human oral bioavailability dataset.
 ## BACE and BBBP
-bbbp and BACE are datasets in Molecule net and benchmark commonly used in graph neural networks for molecular property prediction. 
+bbbp and BACE are datasets in Molecule net and benchmark commonly used in graph neural networks for molecular property prediction. The results on these two datasets are not presented in the paper in order not to detract from the central idea of the article - "human oral bioavailability".
 
     python run.py dataset_name gpu train_batch train_epoch
+    
+|  model  |  BBBP   |  BACE  |
+|  ----  |  ----  | ----  |
+| GCN | 0.882  | 0.851 |
+| 单元格 | 单元格  | 单元格 |
+| 单元格 | 单元格  | 单元格 |
+| 单元格 | 单元格  | 单元格 |
+| 单元格 | 单元格  | 单元格 |
+| 单元格 | 单元格  | 单元格 |
+| 单元格 | 单元格  | 单元格 |
 
 [1]Hou, Tingjun, et al. "ADME evaluation in drug discovery. 6. Can oral bioavailability in humans be effectively predicted by simple molecular property-based rules?." Journal of Chemical Information and Modeling 47.2 (2007): 460-463.
