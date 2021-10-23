@@ -18,12 +18,13 @@ bbbp and BACE are datasets in Molecule net and benchmark commonly used in graph 
     
 |  model  |  BBBP   |  BACE  |
 |  ----  |  ----  | ----  |
-| GCN | 0.882  | 0.851 |
-| ARMA | 0.915  | 0.856 |
-| MPNN | 0.902  | 0.848 |
-| 单元格 | 单元格  | 单元格 |
-| 单元格 | 单元格  | 单元格 |
-| 单元格 | 单元格  | 单元格 |
-| BMANet | 0.946  | 0.883 |
+| GCN |   |  |
+| ARMA |   |  |
+| MPNN |   |  |
+| GAT | 0.8676  | 0.8581 |
+| GATV2 | 0.8754  | 0.8510 |
+| AttentiveFP | 单元格  | 0.8897 |
+| EGC | 单元格  | 单元格 |
+| BMANet |   |  |
 
 [1]Hou, Tingjun, et al. "ADME evaluation in drug discovery. 6. Can oral bioavailability in humans be effectively predicted by simple molecular property-based rules?." Journal of Chemical Information and Modeling 47.2 (2007): 460-463.
