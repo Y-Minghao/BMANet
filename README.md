@@ -18,7 +18,7 @@ bbbp and BACE are datasets in Molecule net and benchmark commonly used in graph 
     
 |  model  |  BBBP   |  BACE  |
 |  ----  |  ----  | ----  |
-| GCN |   |  |
+| GCN |  0.8658 | 0.8476 |
 | ARMA |   |  |
 | MPNN |   |  |
 | GAT | 0.8676  | 0.8581 |
