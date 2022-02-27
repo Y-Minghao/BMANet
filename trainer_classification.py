@@ -201,7 +201,6 @@ class Trainer_classification():
             self.records['train_F1'].append(train_F1)
             self.records['val_F1'].append(val_F1)
             self.records['test_F1'].append(test_F1)
-            # if  val_auc == np.array(self.records['val_auc']).max():
             if val_loss == np.array(self.records['val_loss']).min():
                 self.save_model_and_records(epoch = epoch,val_auc = val_auc,test_auc = test_auc)
                 early_stop_cnt = 0
